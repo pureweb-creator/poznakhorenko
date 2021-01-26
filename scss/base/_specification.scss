@@ -1,0 +1,116 @@
+$color_main: #333;
+$color_title: #000;
+
+$color_active: rgb(128, 188, 220);
+
+$color_text_light: #b3b3b3;
+$color_text_ligt_active: #fff;
+
+body{
+	font-family: 'PT Sans';
+	font-size: 16.8px;
+	line-height: 1.3em;
+}
+
+.container{
+	width: 1140px;
+	margin: 0 auto;	
+}
+
+.d-flex{
+	display: flex;
+}
+
+.d-grid{
+	display: grid;
+}
+
+section{
+	padding: 50px 0;
+}
+
+.section-title{
+	text-transform: uppercase;
+	display: table;
+	margin: 0 auto;
+	position: relative;
+	font-family: "Open Sans";
+	margin-bottom: 70px;
+
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -18px;
+		width: 52px;
+		height: 2px;
+		left: 50%;
+		margin-left: -26px;
+		background: $color_active;
+	}
+}
+
+.btn{
+	background: $color_active;
+	display: table;
+	margin: 0 auto;
+	padding: 20px 28px;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2px;
+    color: $color_text_ligt_active;
+    text-transform: capitalize;
+    font-family: "PT Sans";
+    font-weight: 700;
+    transition: all .3s ease;
+
+    &:hover{
+    	background: darken($color_active, 30);
+    }
+}
+
+
+.stack__item{
+	position: relative;
+	.dummy{
+		margin-top: 100%;
+	}
+
+	.content-box{
+		position: absolute;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	width: 100%;
+	}
+
+	.mask{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		overflow-y: auto;
+		background: #f2f2f2;
+	}
+}
+
+
+a{
+	text-decoration: none;
+	display: block;
+}
+
+input,textarea,button{
+	border: none;
+	outline: none;
+}
+
+body,a,input{
+	color: $color_main;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: $color_title;
+}

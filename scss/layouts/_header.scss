@@ -1,0 +1,321 @@
+.header{
+	font-family: "Open Sans";
+	.top-line{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 12px;
+		text-align: right;
+
+		i{
+			transform: rotate(90deg);
+		}
+	}
+	.heading-wrapper{
+		border-bottom: 1px solid rgb(237, 237, 237);
+	}
+	.heading{
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.nav{
+
+		& > .nav__list > .nav__item{
+			padding-top: 35px;
+			padding-bottom: 35px;
+		}
+
+		&__list--second{
+			padding: 8px 0;
+			position: absolute;
+			z-index: 999;
+			top: 70px;
+			width: fit-content;
+			width: 270px;
+			transition: all .3s ease;
+			background: $color_main;
+			border-top: 2px solid $color_active;
+
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&__list--third{
+			top: -10px;
+			left: 100%;
+			transition: unset
+		}
+
+		&__item{
+			padding: 0 20px;
+			transition: all .3s ease;
+			position: relative;
+
+			&:hover{
+				& > .nav__link{
+					color: $color_active;
+				}
+
+				& > .nav__list{
+					opacity: 1;
+					visibility: visible;
+				}
+
+				& > .nav__list--second:not(.nav__list--third){
+					top: 90px;
+				}
+			}
+		}
+
+		&__item--second{
+			padding: 0;
+			.fa-angle-right{
+				margin-left: auto;
+			}
+			&:hover{
+				& > .nav__link{
+					color: $color_text_ligt_active
+				}
+			}
+		}
+
+		&__item.active{
+			.nav__link{
+				color: rgb(128, 188, 220)
+			}
+		}
+
+		&__link{
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 700;
+			color: #444;
+			transition: all .3s ease;
+		}
+
+		&__link--second{
+			padding: 10px 20px;
+			font-size: 12px;
+			color: $color_text_light;
+			font-weight: 400;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			position: relative;
+		}
+	}
+
+	.search{
+		cursor: pointer;
+		transition: color .2s;
+		&:hover{
+			color: $color_active;
+		}
+	}
+}
+
+.search-form{
+	label{
+		font-family: "PT Sans";
+		letter-spacing: 2px;
+		line-height: 18.2px;
+		font-size: 14px;
+	}
+
+	.input-group{
+		margin-top: 40px;
+		position: relative;
+		&__input{
+			width: 100%;
+			background: transparent;
+			font-size: 35px;
+    		padding: 20px;
+    		color: #fff;
+    		text-align: center;
+    		box-shadow: 0 3px 0 0 rgba(255,255,255,.1);
+		}
+
+		i.fa-search{
+			position: absolute;
+			color: rgba(255,255,255,.2);
+			font-size: 25px;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+
+		}
+	}
+}
+
+.banner{
+	background: $color_active;
+	align-items: center;
+	justify-content: space-between;
+	span{
+		font-weight: 400;
+		color: #000;
+	}
+
+	.banner-word--2nd,
+	.banner-word--3td{
+		font-size: 31px;
+		line-height: 1.7096774193548387em;
+	}
+
+	.banner-word--4th,
+	.banner-word--5th{
+		font-size: 53px;
+		line-height: 1em;
+		font-weight: 900;
+		text-transform: uppercase;
+		display: block;
+	}
+
+	.banner-word--4th{
+		margin-top: 50px
+	}
+
+	.banner-word--5th{
+		margin-bottom: 50px;
+	}
+
+	.banner-word--6th{
+		font-size: 21px;
+		line-height: 2.5238095238095237em;
+	}
+
+
+	&__links{
+		flex-direction: column;
+	}
+
+	& &__link{
+		position: relative;
+		&--first{
+			top: -6px;
+		}
+		&--third{
+			top: 6px;
+		}
+		&__text{
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__subtitle{
+			font-weight: 300;
+			font-size: 14px;
+		}
+
+		&__title{
+			font-size: 19px;
+			font-weight: 600;
+		}
+
+		&__subtitle, &__title{
+			color: $color_text_ligt_active !important;
+		}
+	}
+
+
+}
+
+.fadeIn{
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+	animation-duration: .3s;
+}
+
+.fadeIn--2nd{
+	animation-delay: .2s
+}
+
+.fadeIn--3td{
+	animation-delay: .6s
+}
+
+.fadeIn--4th{
+	animation-delay: 1s
+}
+
+.fadeIn--5th{
+	animation-delay: 1.4s
+}
+
+.fadeIn--6th{
+	animation-delay: 1.8s
+}
+
+.fadeIn--7th{
+	animation-delay: 2.2s
+}
+
+.fadeIn--8th{
+	animation-delay: 2.6s
+}
+
+.fadeIn--9th{
+	animation-delay: 3s
+}
+
+.fadeInDown{
+	animation-name: fadeInDown;
+	animation-duration: .5s
+}
+
+.fadeInUp{
+	animation-name: fadeInUp;
+	animation-duration: .5s
+}
+
+.fadeInLeft{
+	animation-name: fadeInLeft;
+	animation-duration: .5s
+}
+
+@keyframes fadeIn{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInDown{
+	from{
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);	
+	}
+}
+
+@keyframes fadeInUp{
+	from{
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);	
+	}
+}
+
+@keyframes fadeInLeft{
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateY(0);	
+	}
+}

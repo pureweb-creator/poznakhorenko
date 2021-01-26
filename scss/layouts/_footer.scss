@@ -1,0 +1,13 @@
+.footer{
+	padding: 25px 0 20px 0;
+	background: rgb(61, 64, 69);
+	.footer__copyright{
+		color: rgb(140, 142, 145);
+		font-size: 13px;
+		display: flex;
+		a{
+			color: #fff;
+			font-size: 13px;
+		}
+	}
+}
