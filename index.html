@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=PT+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+
+
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=PT+Sans&display=swap" rel="preload">
+
+    <link rel="stylesheet" media="print" onload="this.media='all'; this.onload = null" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+
+
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" type="text/css" media="all" href="css/main.min.css">
+    <noscript><link rel="stylesheet" href="css/main.min.css"></noscript>
     <title>Повышение эффективности руководителей</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 
 		<div class="top-line container">
 			<a href="tel:380682706090" class="tel">
@@ -22,11 +30,11 @@
 
 		<div class="heading-wrapper">
 			<div class="container heading d-flex">
-				<a href="/" class="home-logo"><img src="img/logo.png" alt="home logo"></a>
-				<nav class="nav">
+				<a href="/" class="home-logo"><img src="img/logo.webp" alt="home logo" class="lazy"></a>
+				<nav class="nav" id="nav">
 					<ul class="nav__list d-flex">
-						<li class="nav__item active"><a href="#" class="nav__link">О себе</a></li>
-						<li class="nav__item">
+						<li class="nav__item nav__item--first active"><a href="#about" class="nav__link go_to">О себе</a></li>
+						<li class="nav__item nav__item--first">
 							<a href="#" class="nav__link">Мои темы</a>
 							<ul class="nav__list nav__list--second">
 								<li class="nav__item nav__item--second">
@@ -102,10 +110,10 @@
 								</li>
 							</ul>
 						</li>
-						<li class="nav__item"><a href="#" class="nav__link">Мои видео</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Клиенты</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Темы коллег</a></li>
-						<li class="nav__item">
+						<li class="nav__item nav__item--first"><a href="#video" class="nav__link go_to">Мои видео</a></li>
+						<li class="nav__item nav__item--first"><a href="#brands" class="nav__link go_to">Клиенты</a></li>
+						<li class="nav__item nav__item--first"><a href="#" class="nav__link">Темы коллег</a></li>
+						<li class="nav__item nav__item--first">
 							<a href="#" class="nav__link">Вакансии</a>
 							<ul class="nav__list nav__list--second">
 								<li class="nav__item nav__item--second"><a href="#" class="nav__link nav__link--second">web-разработчик (php)</a></li>
@@ -114,11 +122,79 @@
 								<li class="nav__item nav__item--second"><a href="#" class="nav__link nav__link--second">  СПЕЦИАЛИСТ ПО РАЗРАБОТКЕ ФИНАНСОВЫХ МОДЕЛЕЙ</a></li>
 							</ul>
 						</li>
-						<li class="nav__item"><a href="#" class="nav__link">Блог</a></li>
-						<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+						<li class="nav__item nav__item--first"><a href="#" class="nav__link">Блог</a></li>
+						<li class="nav__item nav__item--first"><a href="#" class="nav__link">Контакты</a></li>
 					</ul>
 				</nav>
-				<a href="#" data-remodal-target="modal"><i class="fas fa-search search"></i></a>
+				<nav class="mob-nav">
+					<ul class="mob-nav__list">
+						<li class="mob-nav__item">
+							<a href="#about" class="mob-nav__link go_to">О себе</a>
+						</li>
+						<li class="mob-nav__item has-children">
+							<a href="#" class="mob-nav__link">Мои темы <i class="fas fa-angle-right"></i></a>
+
+							<ul class="mob-nav__list mob-nav__list--second sub-menu">
+								<li class="mob-nav__item mob-nav__item--second has-children">
+									<a href="#" class="mob-nav__link mob-nav__link--second">Стратеги и планирование <i class="fas fa-angle-right"></i></a>
+
+									<ul class="mob-nav__list mob-nav__list--third sub-menu">
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Стратегии и планирование
+											</a>
+										</li>
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Менеджмент
+											</a>
+										</li>
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Маркетинг и продажи
+											</a>
+										</li>
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Управление персоналом
+											</a>
+										</li>
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Формирование бизнес-команд
+											</a>
+										</li>
+										<li class="mob-nav__item mob-nav__item--third">
+											<a href="#" class="mob-nav__link mob-nav__link--third">
+												Поиск и подбор талантов
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#video" class="mob-nav__link go_to">Мои видео</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#brands" class="mob-nav__link go_to">Клиенты</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#" class="mob-nav__link">Темы коллег</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#" class="mob-nav__link">Вакансии</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#" class="mob-nav__link">Блог</a>
+						</li>
+						<li class="mob-nav__item">
+							<a href="#" class="mob-nav__link">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="#" data-remodal-target="modal" class="search-button"><i class="fas fa-search search"></i></a>
+				<i class="fas fa-bars burger"></i>
 
 				<div class="remodal" data-remodal-id="modal">
 				  <button data-remodal-action="close" class="remodal-close"></button>
@@ -138,7 +214,7 @@
 
 		<div class="container">
 			<div class="banner d-flex">
-				<img src="img/banner.png" alt="banner image" class="fadeIn fadeIn--1st">
+				<img src="img/banner.webp" alt="banner image" class="fadeIn fadeIn--1st">
 				<div class="banner__text">
 					<span class="banner-word--2nd fadeIn fadeIn--2nd">Привет,</span>
 					<span class="banner-word--3td fadeIn fadeIn--3td">я</span>
@@ -148,21 +224,21 @@
 				</div>
 				<div class="banner__links d-flex">
 					<a href="#" class="banner__link banner__link--first fadeIn fadeInDown fadeIn--7th">
-						<img src="img/banner-link1.png" alt="banner  link">
+						<img src="img/banner-link1.webp" alt="banner  link">
 						<span class="banner__link__text">
 							<span class="banner__link__subtitle">Серия статей</span>
 							<h4 class="banner__link__title">Огранизация людей</h4>
 						</span>	
 					</a>
 					<a href="#" class="banner__link banner__link--second fadeIn fadeInLeft fadeIn--8th">
-						<img src="img/banner-link1.png" alt="banner  link">
+						<img src="img/banner-link1.webp" alt="banner  link">
 						<span class="banner__link__text">
 							<span class="banner__link__subtitle">Серия статей</span>
 							<h4 class="banner__link__title">Огранизация людей</h4>
 						</span>	
 					</a>
 					<a href="#" class="banner__link banner__link--third fadeIn fadeInUp fadeIn--9th">
-						<img src="img/banner-link1.png" alt="banner  link">
+						<img src="img/banner-link1.webp" alt="banner  link">
 						<span class="banner__link__text">
 							<span class="banner__link__subtitle">Серия статей</span>
 							<h4 class="banner__link__title">Огранизация людей</h4>
@@ -172,7 +248,7 @@
 			</div>
 		</div>
 	</header>
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<h2 class="section-title fadeIn">
 				О себе
@@ -199,7 +275,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="themes" data-parallax="scroll" data-image-src="img/kogo_ishu_background.jpg">
+	<section class="themes" id="themes" data-parallax="scroll" data-image-src="img/kogo_ishu_background.webp">
 		<div class="container">
 			<h2 class="section-title fadeIn">
 				МОИ ТЕМЫ
@@ -210,7 +286,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -228,7 +304,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -246,7 +322,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -264,7 +340,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -282,7 +358,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -300,7 +376,7 @@
 					<div class="flip-box content-box">
 						<div class="flip-box-inner">
 						    <div class="flip-box-front">
-						    	<img src="img/uslugi-01.jpg" alt="services" class="thumnbnail">
+						    	<img data-src="img/uslugi-01.webp" alt="services" class="lazy thumnbnail">
 						    	<h3 class="title">Стратегии и планирование</h3>
 						    </div>
 						    <div class="flip-box-back">
@@ -316,89 +392,62 @@
 			</div>	
 		</div>
 	</section>
-	<section class="video">
+	<section class="video" id="video">
 		<div class="container">
 			<h2 class="section-title fadeIn">
 				МОИ ВИДЕО
 			</h2>
 			<div class="stack d-grid">
 				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
+					<iframe width="262" height="153" src="https://www.youtube.com/embed/QyZXW0dNqDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
+					<iframe width="262" height="153" src="https://www.youtube.com/embed/QyZXW0dNqDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
-				</div>
-				<div class="stack__item">
-					<iframe loading="lazy" src="https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""  srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/r3jUsJejroQ?feature=oembed&amp;wmode=opaque><img src=img/mqdefault_6s.webp alt=''><span>▶</span></a>"></iframe>
+					<iframe width="262" height="153" src="https://www.youtube.com/embed/QyZXW0dNqDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</div>	
 		</div>
 	</section>
-	<section class="brands">
+	<section class="brands" id="brands">
 		<div class="container">
 			<h2 class="section-title fadeIn">
-				МОИ ВИДЕО
+				МОИ Клиенты
 			</h2>
 			<div class="stack brands-stack">
 				<div class="brands-stack--first">
-					<img src="img/akvareli-150x120.jpg" alt="akvareli-150x120.jpg">
-					<img src="img/amstor-150x120.jpg" alt="amstor-150x120.jpg">
-					<img src="img/askanija-150x120.jpg" alt="img/askanija-150x120.jpg">
-					<img src="img/autotrading-150x120.jpg" alt="autotrading-150x120.jpg">
-					<img src="img/avto_gril_mislivec-150x120.jpg" alt="avto_gril_mislivec-150x120.jpg">
-					<img src="img/bayer-150x120.jpg" alt="bayer-150x120.jpg">
-					<img src="img/buro_marketing-150x120.jpg" alt="buro_marketing-150x120.jpg">
+					<img data-lazy="img/akvareli-150x120.webp" alt="akvareli-150x120.webp">
+					<img data-lazy="img/amstor-150x120.webp" alt="amstor-150x120.webp">
+					<img data-lazy="img/askanija-150x120.webp" alt="img/askanija-150x120.webp">
+					<img data-lazy="img/autotrading-150x120.webp" alt="autotrading-150x120.webp">
+					<img data-lazy="img/avto_gril_mislivec-150x120.webp" alt="avto_gril_mislivec-150x120.webp">
+					<img data-lazy="img/bayer-150x120.webp" alt="bayer-150x120.webp">
+					<img data-lazy="img/buro_marketing-150x120.webp" alt="buro_marketing-150x120.webp">
 				</div>
 				<div class="brands-stack--second">
-					<img src="img/akvareli-150x120.jpg" alt="akvareli-150x120.jpg">
-					<img src="img/amstor-150x120.jpg" alt="amstor-150x120.jpg">
-					<img src="img/askanija-150x120.jpg" alt="img/askanija-150x120.jpg">
-					<img src="img/autotrading-150x120.jpg" alt="autotrading-150x120.jpg">
-					<img src="img/avto_gril_mislivec-150x120.jpg" alt="avto_gril_mislivec-150x120.jpg">
-					<img src="img/bayer-150x120.jpg" alt="bayer-150x120.jpg">
-					<img src="img/buro_marketing-150x120.jpg" alt="buro_marketing-150x120.jpg">
+					<img data-lazy="img/akvareli-150x120.webp" alt="akvareli-150x120.webp">
+					<img data-lazy="img/amstor-150x120.webp" alt="amstor-150x120.webp">
+					<img data-lazy="img/askanija-150x120.webp" alt="img/askanija-150x120.webp">
+					<img data-lazy="img/autotrading-150x120.webp" alt="autotrading-150x120.webp">
+					<img data-lazy="img/avto_gril_mislivec-150x120.webp" alt="avto_gril_mislivec-150x120.webp">
+					<img data-lazy="img/bayer-150x120.webp" alt="bayer-150x120.webp">
+					<img data-lazy="img/buro_marketing-150x120.webp" alt="buro_marketing-150x120.webp">
 				</div>
 				<div class="brands-stack--third">
-					<img src="img/akvareli-150x120.jpg" alt="akvareli-150x120.jpg">
-					<img src="img/amstor-150x120.jpg" alt="amstor-150x120.jpg">
-					<img src="img/askanija-150x120.jpg" alt="img/askanija-150x120.jpg">
-					<img src="img/autotrading-150x120.jpg" alt="autotrading-150x120.jpg">
-					<img src="img/avto_gril_mislivec-150x120.jpg" alt="avto_gril_mislivec-150x120.jpg">
-					<img src="img/bayer-150x120.jpg" alt="bayer-150x120.jpg">
-					<img src="img/buro_marketing-150x120.jpg" alt="buro_marketing-150x120.jpg">
+					<img data-lazy="img/akvareli-150x120.webp" alt="akvareli-150x120.webp">
+					<img data-lazy="img/amstor-150x120.webp" alt="amstor-150x120.webp">
+					<img data-lazy="img/askanija-150x120.webp" alt="img/askanija-150x120.webp">
+					<img data-lazy="img/autotrading-150x120.webp" alt="autotrading-150x120.webp">
+					<img data-lazy="img/avto_gril_mislivec-150x120.webp" alt="avto_gril_mislivec-150x120.webp">
+					<img data-lazy="img/bayer-150x120.webp" alt="bayer-150x120.webp">
+					<img data-lazy="img/buro_marketing-150x120.webp" alt="buro_marketing-150x120.webp">
 				</div>
 			</div>
 			<a href="#" class="load-more btn">подробнее...</a>
 		</div>
 	</section>
-	<section class="testi" data-parallax="scroll" data-image-src="img/OTZIVI_background.jpg">
+	<section class="testi" data-parallax="scroll" data-image-src="img/OTZIVI_background.webp">
 		<div class="container">
 			<div class="stack d-grid">
 				<div class="stack__item">
@@ -406,7 +455,7 @@
 						Простота. Ясность. И результат. Берется группа. И шаг за шагом, выводится на результат, который хочет собственник. Это прекрасно.
 					</p>
 					<div class="testi__author testi-author d-flex">
-						<img src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.jpg" alt="avatar" class="testi__avatar">
+						<img data-src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.webp" alt="avatar" class="lazy testi__avatar">
 						<div class="testi-author__info">
 							<h4 class="testi-author__name">Дмитрий Дмитренко</h4>
 							<span class="testi-author__profession">
@@ -420,7 +469,7 @@
 						Простота. Ясность. И результат. Берется группа. И шаг за шагом, выводится на результат, который хочет собственник. Это прекрасно.
 					</p>
 					<div class="testi__author testi-author d-flex">
-						<img src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.jpg" alt="avatar" class="testi__avatar">
+						<img data-src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.webp" alt="avatar" class="lazy testi__avatar">
 						<div class="testi-author__info">
 							<h4 class="testi-author__name">Дмитрий Дмитренко</h4>
 							<span class="testi-author__profession">
@@ -434,7 +483,7 @@
 						Простота. Ясность. И результат. Берется группа. И шаг за шагом, выводится на результат, который хочет собственник. Это прекрасно.
 					</p>
 					<div class="testi__author testi-author d-flex">
-						<img src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.jpg" alt="avatar" class="testi__avatar">
+						<img data-src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.webp" alt="avatar" class="lazy testi__avatar">
 						<div class="testi-author__info">
 							<h4 class="testi-author__name">Дмитрий Дмитренко</h4>
 							<span class="testi-author__profession">
@@ -448,7 +497,7 @@
 						Простота. Ясность. И результат. Берется группа. И шаг за шагом, выводится на результат, который хочет собственник. Это прекрасно.
 					</p>
 					<div class="testi__author testi-author d-flex">
-						<img src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.jpg" alt="avatar" class="testi__avatar">
+						<img data-src="img/Dmitrenko-mwp12kptguzytkby36csilcirq1rj7j7cmc51jcvqo.jpeg.pagespeed.ce.5XxHc88bWA.webp" alt="avatar" class="lazy testi__avatar">
 						<div class="testi-author__info">
 							<h4 class="testi-author__name">Дмитрий Дмитренко</h4>
 							<span class="testi-author__profession">
@@ -469,7 +518,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -481,7 +530,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -493,56 +542,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
-						<div class="mask">
-							<h3 class="colleagues__name">Юрий Ващенко</h3>
-							<p class="collegues__text">
-								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
-								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="stack__item">
-					<div class="dummy"></div>
-					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
-						<div class="mask">
-							<h3 class="colleagues__name">Юрий Ващенко</h3>
-							<p class="collegues__text">
-								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="stack__item">
-					<div class="dummy"></div>
-					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
-						<div class="mask">
-							<h3 class="colleagues__name">Юрий Ващенко</h3>
-							<p class="collegues__text">
-								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="stack__item">
-					<div class="dummy"></div>
-					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
-						<div class="mask">
-							<h3 class="colleagues__name">Юрий Ващенко</h3>
-							<p class="collegues__text">
-								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="stack__item">
-					<div class="dummy"></div>
-					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -555,7 +555,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -567,7 +567,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -579,7 +579,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -591,7 +591,7 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -604,7 +604,56 @@
 				<div class="stack__item">
 					<div class="dummy"></div>
 					<div class="content-box">
-						<img src="img/sergej-bublik-1.jpg" alt="Collegue Sergio">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
+						<div class="mask">
+							<h3 class="colleagues__name">Юрий Ващенко</h3>
+							<p class="collegues__text">
+								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="stack__item">
+					<div class="dummy"></div>
+					<div class="content-box">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
+						<div class="mask">
+							<h3 class="colleagues__name">Юрий Ващенко</h3>
+							<p class="collegues__text">
+								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="stack__item">
+					<div class="dummy"></div>
+					<div class="content-box">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
+						<div class="mask">
+							<h3 class="colleagues__name">Юрий Ващенко</h3>
+							<p class="collegues__text">
+								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="stack__item">
+					<div class="dummy"></div>
+					<div class="content-box">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
+						<div class="mask">
+							<h3 class="colleagues__name">Юрий Ващенко</h3>
+							<p class="collegues__text">
+								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
+								Здравствуйте! Меня зовут Юрий. Более 20 лет я занимаюсь практиками организационного развития. Я помогаю организациям работать более системно, упорядоченно и эффективно. Благодаря этому бизнесы зарабатывают больше денег.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="stack__item">
+					<div class="dummy"></div>
+					<div class="content-box">
+						<img data-src="img/sergej-bublik-1.webp" class="lazy" alt="Collegue Sergio">
 						<div class="mask">
 							<h3 class="colleagues__name">Юрий Ващенко</h3>
 							<p class="collegues__text">
@@ -629,7 +678,7 @@
 						<div class="hot-vacancy">
 							Горячая вакансия
 						</div>
-						<img src="img/3_biznes_trener.jpg" alt="vacancy">
+						<img data-src="img/3_biznes_trener.webp" class="lazy" alt="vacancy">
 						<h3 class="vacancy__title">WEB-разработчик</h3>
 					</div>
 				</div>
@@ -639,7 +688,7 @@
 						<div class="hot-vacancy">
 							Горячая вакансия
 						</div>
-						<img src="img/3_biznes_trener.jpg" alt="vacancy">
+						<img data-src="img/3_biznes_trener.webp" class="lazy" alt="vacancy">
 						<h3 class="vacancy__title">WEB-разработчик</h3>
 					</div>
 				</div>
@@ -649,7 +698,7 @@
 						<div class="hot-vacancy">
 							Горячая вакансия
 						</div>
-						<img src="img/3_biznes_trener.jpg" alt="vacancy">
+						<img data-src="img/3_biznes_trener.webp" class="lazy" alt="vacancy">
 						<h3 class="vacancy__title">WEB-разработчик</h3>
 					</div>
 				</div>
@@ -665,7 +714,7 @@
 			<div class="stack d-grid">
 				<div class="stack__item blog-slider">
 					<div class="blog-slider__item">
-						<img src="img/blog-item.jpg" alt="thumnbnail">
+						<img data-src="img/blog-item.webp" class="lazy" alt="thumnbnail">
 						<div class="mask"></div>
 
 						<div class="blog-content">
@@ -688,7 +737,7 @@
 						</div>
 					</div>
 					<div class="blog-slider__item">
-						<img src="img/blog-item.jpg" alt="thumnbnail">
+						<img data-src="img/blog-item.webp" class="lazy" alt="thumnbnail">
 						<div class="mask"></div>
 
 						<div class="blog-content">
@@ -712,7 +761,7 @@
 					</div>
 				</div>
 				<div class="stack__item">
-					<img src="img/blog-item2.jpg" alt="thumnbnail">
+					<img data-src="img/blog-item2.webp" class="lazy" alt="thumnbnail">
 					<div class="mask"></div>
 					<div class="blog-content">
 						<h3 class="blog-title">
@@ -734,7 +783,7 @@
 					</div>
 				</div>
 				<div class="stack__item">
-					<img src="img/blog-item3.jpg" alt="thumnbnail">
+					<img data-src="img/blog-item3.webp" class="lazy" alt="thumnbnail">
 					<div class="mask"></div>
 					<div class="blog-content">
 						<h3 class="blog-title">
@@ -756,7 +805,7 @@
 					</div>
 				</div>
 				<div class="stack__item">
-					<img src="img/blog-item4.png" alt="thumnbnail">
+					<img data-src="img/blog-item4.webp" class="lazy" alt="thumnbnail">
 					<div class="mask"></div>
 					<div class="blog-content">
 						<h3 class="blog-title">
@@ -804,6 +853,9 @@
 	</section>
 	<footer class="footer">
 		<div class="container">
+			<a href="#header" class="go-to-top go_to">
+				<i class="fas fa-angle-up"></i>
+			</a>
 			<span class="footer__copyright">
 				Copyright © 2015 - 2020 Poznakhorenko | All Rights Reserved
 				&nbsp;&nbsp;&nbsp;
@@ -816,7 +868,7 @@
 			</span>
 		</div>
 	</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="js/main.min.js"></script>
+	<script asyn defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script async defer src="js/main.min.js"></script>
 </body>
 </html>

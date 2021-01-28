@@ -4210,32 +4210,106 @@
 
 
 
+/*! jQuery & Zepto Lazy v1.7.10 - http://jquery.eisbehr.de/lazy - MIT&GPL-2.0 license - Copyright 2012-2018 Daniel 'Eisbehr' Kern */
+!function(t,e){"use strict";function r(r,a,i,u,l){function f(){L=t.devicePixelRatio>1,i=c(i),a.delay>=0&&setTimeout(function(){s(!0)},a.delay),(a.delay<0||a.combined)&&(u.e=v(a.throttle,function(t){"resize"===t.type&&(w=B=-1),s(t.all)}),u.a=function(t){t=c(t),i.push.apply(i,t)},u.g=function(){return i=n(i).filter(function(){return!n(this).data(a.loadedName)})},u.f=function(t){for(var e=0;e<t.length;e++){var r=i.filter(function(){return this===t[e]});r.length&&s(!1,r)}},s(),n(a.appendScroll).on("scroll."+l+" resize."+l,u.e))}function c(t){var i=a.defaultImage,o=a.placeholder,u=a.imageBase,l=a.srcsetAttribute,f=a.loaderAttribute,c=a._f||{};t=n(t).filter(function(){var t=n(this),r=m(this);return!t.data(a.handledName)&&(t.attr(a.attribute)||t.attr(l)||t.attr(f)||c[r]!==e)}).data("plugin_"+a.name,r);for(var s=0,d=t.length;s<d;s++){var A=n(t[s]),g=m(t[s]),h=A.attr(a.imageBaseAttribute)||u;g===N&&h&&A.attr(l)&&A.attr(l,b(A.attr(l),h)),c[g]===e||A.attr(f)||A.attr(f,c[g]),g===N&&i&&!A.attr(E)?A.attr(E,i):g===N||!o||A.css(O)&&"none"!==A.css(O)||A.css(O,"url('"+o+"')")}return t}function s(t,e){if(!i.length)return void(a.autoDestroy&&r.destroy());for(var o=e||i,u=!1,l=a.imageBase||"",f=a.srcsetAttribute,c=a.handledName,s=0;s<o.length;s++)if(t||e||A(o[s])){var g=n(o[s]),h=m(o[s]),b=g.attr(a.attribute),v=g.attr(a.imageBaseAttribute)||l,p=g.attr(a.loaderAttribute);g.data(c)||a.visibleOnly&&!g.is(":visible")||!((b||g.attr(f))&&(h===N&&(v+b!==g.attr(E)||g.attr(f)!==g.attr(F))||h!==N&&v+b!==g.css(O))||p)||(u=!0,g.data(c,!0),d(g,h,v,p))}u&&(i=n(i).filter(function(){return!n(this).data(c)}))}function d(t,e,r,i){++z;var o=function(){y("onError",t),p(),o=n.noop};y("beforeLoad",t);var u=a.attribute,l=a.srcsetAttribute,f=a.sizesAttribute,c=a.retinaAttribute,s=a.removeAttribute,d=a.loadedName,A=t.attr(c);if(i){var g=function(){s&&t.removeAttr(a.loaderAttribute),t.data(d,!0),y(T,t),setTimeout(p,1),g=n.noop};t.off(I).one(I,o).one(D,g),y(i,t,function(e){e?(t.off(D),g()):(t.off(I),o())})||t.trigger(I)}else{var h=n(new Image);h.one(I,o).one(D,function(){t.hide(),e===N?t.attr(C,h.attr(C)).attr(F,h.attr(F)).attr(E,h.attr(E)):t.css(O,"url('"+h.attr(E)+"')"),t[a.effect](a.effectTime),s&&(t.removeAttr(u+" "+l+" "+c+" "+a.imageBaseAttribute),f!==C&&t.removeAttr(f)),t.data(d,!0),y(T,t),h.remove(),p()});var m=(L&&A?A:t.attr(u))||"";h.attr(C,t.attr(f)).attr(F,t.attr(l)).attr(E,m?r+m:null),h.complete&&h.trigger(D)}}function A(t){var e=t.getBoundingClientRect(),r=a.scrollDirection,n=a.threshold,i=h()+n>e.top&&-n<e.bottom,o=g()+n>e.left&&-n<e.right;return"vertical"===r?i:"horizontal"===r?o:i&&o}function g(){return w>=0?w:w=n(t).width()}function h(){return B>=0?B:B=n(t).height()}function m(t){return t.tagName.toLowerCase()}function b(t,e){if(e){var r=t.split(",");t="";for(var a=0,n=r.length;a<n;a++)t+=e+r[a].trim()+(a!==n-1?",":"")}return t}function v(t,e){var n,i=0;return function(o,u){function l(){i=+new Date,e.call(r,o)}var f=+new Date-i;n&&clearTimeout(n),f>t||!a.enableThrottle||u?l():n=setTimeout(l,t-f)}}function p(){--z,i.length||z||y("onFinishedAll")}function y(t,e,n){return!!(t=a[t])&&(t.apply(r,[].slice.call(arguments,1)),!0)}var z=0,w=-1,B=-1,L=!1,T="afterLoad",D="load",I="error",N="img",E="src",F="srcset",C="sizes",O="background-image";"event"===a.bind||o?f():n(t).on(D+"."+l,f)}function a(a,o){var u=this,l=n.extend({},u.config,o),f={},c=l.name+"-"+ ++i;return u.config=function(t,r){return r===e?l[t]:(l[t]=r,u)},u.addItems=function(t){return f.a&&f.a("string"===n.type(t)?n(t):t),u},u.getItems=function(){return f.g?f.g():{}},u.update=function(t){return f.e&&f.e({},!t),u},u.force=function(t){return f.f&&f.f("string"===n.type(t)?n(t):t),u},u.loadAll=function(){return f.e&&f.e({all:!0},!0),u},u.destroy=function(){return n(l.appendScroll).off("."+c,f.e),n(t).off("."+c),f={},e},r(u,l,a,f,c),l.chainable?a:u}var n=t.jQuery||t.Zepto,i=0,o=!1;n.fn.Lazy=n.fn.lazy=function(t){return new a(this,t)},n.Lazy=n.lazy=function(t,r,i){if(n.isFunction(r)&&(i=r,r=[]),n.isFunction(i)){t=n.isArray(t)?t:[t],r=n.isArray(r)?r:[r];for(var o=a.prototype.config,u=o._f||(o._f={}),l=0,f=t.length;l<f;l++)(o[t[l]]===e||n.isFunction(o[t[l]]))&&(o[t[l]]=i);for(var c=0,s=r.length;c<s;c++)u[r[c]]=t[0]}},a.prototype.config={name:"lazy",chainable:!0,autoDestroy:!0,bind:"load",threshold:500,visibleOnly:!1,appendScroll:t,scrollDirection:"both",imageBase:null,defaultImage:"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==",placeholder:null,delay:-1,combined:!1,attribute:"data-src",srcsetAttribute:"data-srcset",sizesAttribute:"data-sizes",retinaAttribute:"data-retina",loaderAttribute:"data-loader",imageBaseAttribute:"data-imagebase",removeAttribute:!0,handledName:"handled",loadedName:"loaded",effect:"show",effectTime:0,enableThrottle:!0,throttle:250,beforeLoad:e,afterLoad:e,onError:e,onFinishedAll:e},n(t).on("load",function(){o=!0})}(window);
 
-$('.brands-stack--first').slick({
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true
-});
 
-$('.brands-stack--second').slick({
-  slidesToShow: 6,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000
-});
 
-$('.brands-stack--third').slick({
+
+$('.lazy').Lazy();
+
+
+
+
+$('.brands-stack--first, .brands-stack--second, .brands-stack--third').slick({
   slidesToShow: 6,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 4000
+  lazyLoad: 'ondemand',
+  responsive: [
+    {
+      breakpoint: 700,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
 
 $('.blog-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
+  lazyLoad: 'ondemand',
   prevArrow: '<button type="button" class="slick-prev"><svg width="10" height="18" viewBox="0 0 10 18" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M0.344691 9.49395L8.67022 17.7964C8.94299 18.0683 9.38462 18.0679 9.65694 17.795C9.92905 17.5223 9.92835 17.0804 9.65554 16.8083L1.82557 8.99997L9.65582 1.19166C9.92859 0.91955 9.9293 0.477954 9.65722 0.205143C9.52071 0.0683857 9.34187 5.69936e-06 9.16304 5.69154e-06C8.98465 5.68375e-06 8.80652 0.0679273 8.67025 0.203735L0.344691 8.50603C0.213312 8.63674 0.13959 8.81463 0.13959 8.99997C0.13959 9.18531 0.213523 9.36299 0.344691 9.49395Z" fill="#fff"/></svg></button>',
   nextArrow: '<button type="button" class="slick-next"><svg width="10" height="18" viewBox="0 0 10 18" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M9.65531 8.50605L1.32978 0.20355C1.05701 -0.0683121 0.615377 -0.0678551 0.343058 0.204956C0.0709494 0.477733 0.0716525 0.91961 0.344464 1.19168L8.17443 9.00003L0.344183 16.8083C0.0714063 17.0805 0.0707032 17.522 0.342776 17.7949C0.479287 17.9316 0.658127 18 0.836966 18C1.01535 18 1.19348 17.9321 1.32975 17.7963L9.65531 9.49397C9.78669 9.36326 9.86041 9.18537 9.86041 9.00003C9.86041 8.81469 9.78648 8.63701 9.65531 8.50605Z" fill="#fff"/></svg></button>',
       
 });
+
+
+
+
+
+
+
+
+$('.burger').on('click', function(){
+  $('.mob-nav').toggle(200);
+});
+
+// Mobile menu
+$('.has-children > a').on('click', function(e) {
+  e.preventDefault;
+  $(this).next('.sub-menu').toggle(200);
+  $(this).toggleClass('active');
+  return false;
+});
+
+$('.mob-nav__item:not(.has-children) > a').on('click', function(e) {
+  e.preventDefault;
+  $('.mob-nav').toggle(200);
+  return false;
+});
+
+
+$(window).scroll(function () {
+  if($(window).scrollTop() > 50) {
+    $(".heading-wrapper").addClass('sticky');
+    $('body').addClass('gap');
+
+    $('.go-to-top').css('opacity', '1');
+  } else {
+    $('body').removeClass('gap');
+    $(".heading-wrapper").removeClass('sticky');
+    $('.go-to-top').css('opacity', '0');
+  }
+});
+
+
+$('.go_to').click( function(){ // ловим клик по ссылке с классом go_to
+  var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
+      if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
+    $('html, body').animate({ scrollTop: $(scroll_el).offset().top - 60 }, 500); // анимируем скроолинг к элементу scroll_el
+      }
+    return false; // выключаем стандартное действие
+  });

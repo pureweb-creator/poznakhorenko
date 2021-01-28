@@ -11,6 +11,7 @@
   "private": true,
   "devDependencies": {
     "browser-sync": "^2.26.14",
+    "critical": "^2.0.6",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-rename": "^1.4.0",

@@ -5,7 +5,26 @@ var
     sourcemaps   = require("gulp-sourcemaps"),
     uglify       = require("gulp-uglify"),
     browserSync  = require("browser-sync").create(),
-    sass         = require("gulp-sass");
+    sass         = require("gulp-sass"),
+    log          = require('fancy-log'),
+    critical     = require('critical').stream;
+
+// Generate & Inline Critical-path CSS
+gulp.task('critical', () => {
+  return gulp
+    .src('*.html')
+    .pipe(
+      critical({
+        base: './',
+        inline: true,
+        css: ['css/main.min.css'],
+      })
+    )
+    .on('error', err => {
+      log.error(err.message);
+    })
+    .pipe(gulp.dest('./'));
+});
 
 function livereload(done){
     browserSync.init({
@@ -59,5 +78,5 @@ function watch(){
     gulp.watch("php/**/*.php", browserReload);
 }
 
-gulp.task("default", gulp.parallel(watch, livereload));
+gulp.task("default", gulp.parallel(watch, livereload, critical));
 gulp.task(livereload);

@@ -6,14 +6,23 @@ $color_active: rgb(128, 188, 220);
 $color_text_light: #b3b3b3;
 $color_text_ligt_active: #fff;
 
+html,body{
+	overflow-x: hidden
+}
+
 body{
 	font-family: 'PT Sans';
 	font-size: 16.8px;
 	line-height: 1.3em;
 }
 
+body.gap{
+	padding-top: 92.6px;
+}
+
 .container{
-	width: 1140px;
+	max-width: 1140px;
+	width: 100%;
 	margin: 0 auto;	
 }
 
