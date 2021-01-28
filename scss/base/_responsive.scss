@@ -220,6 +220,12 @@
 	.header .banner .banner-word--6th, .header .banner .banner-word--2nd, .header .banner .banner-word--3td{
 		font-size: 17px;
 	}
+
+	.page-works{
+		.stack:not(.brands-stack){
+			grid-template-columns: 1fr 1fr;
+		}
+	}
 }
 
 @media (max-width: 500px){

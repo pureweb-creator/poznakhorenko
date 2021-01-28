@@ -1,0 +1,42 @@
+.page-works{
+	&-testimonials{
+		background: $color_active
+	}
+
+	.stack{
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 30px;
+
+		&__item{
+			&:hover .mask{
+				opacity: 1;
+			}
+			.mask{
+				background: rgba(128, 188, 220, .8);
+				font-size: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				opacity: 0;
+				i{
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.rules{
+		max-width: 1100px;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		color: #ccc;
+		font-size: 12px;
+		text-align: center;
+
+		p{
+			margin-bottom: 20px;
+		}
+	}
+}
