@@ -223,6 +223,10 @@
 }
 
 @media (max-width: 500px){
+	.fadeIn{
+		animation: unset;
+		opacity: 1;
+	}
 	.header{
 		.banner{
 			flex-direction: column-reverse;
