@@ -64,23 +64,23 @@ $(document).ready(function(){
 		});
 	}
 
-	$('.burger').on('click', function(){
+	$('.burger').on('click', {passive: true},function(){
 	  $('.mob-nav').toggle(200);
-	}, {passive: true});
+	});
 
 	// Mobile menu
-	$('.has-children > a').on('click', function(e) {
+	$('.has-children > a').on('click', {passive: true}, function(e) {
 	  e.preventDefault;
 	  $(this).next('.sub-menu').toggle(200);
 	  $(this).toggleClass('active');
 	  return false;
-	}, {passive: true});
+	});
 
-	$('.mob-nav__item:not(.has-children) > a').on('click', function(e) {
+	$('.mob-nav__item:not(.has-children) > a').on('click', {passive: true}, function(e) {
 	  e.preventDefault;
 	  $('.mob-nav').toggle(200);
 	  return false;
-	}, {passive: true});
+	});
 
 	$(window).scroll(function () {
 	  if($(window).scrollTop() > 50) {
@@ -101,5 +101,5 @@ $(document).ready(function(){
 	    	$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 60 }, 500); 
 	    }
 	    return false; // выключаем стандартное действие
-	}, {passive: true});
+	});
 });

@@ -26,6 +26,35 @@ body.gap{
 	margin: 0 auto;	
 }
 
+i.fas:before{
+	font-family: "FontAwesome";
+	font-style: normal;
+}
+
+.fa-phone:before{
+	content: "\f879";
+}
+
+.fa-bars:before{
+	content: "\f0c9";
+}
+
+.fa-search:before{
+	content: "\f002";
+}
+
+.fa-angle-up:before{
+	content: "\f106";
+}
+
+.fa-angle-right:before{
+	content: "\f105"
+}
+
+.fa-plus-circle:before{
+	content: "\f055";
+}
+
 .d-flex{
 	display: flex;
 }
