@@ -4226,7 +4226,9 @@ $(document).ready(function(){
 	  slidesToShow: 6,
 	  slidesToScroll: 1,
 	  autoplay: true,
-	  lazyLoad: 'ondemand',
+	  lazyLoad: 'progressive',
+	  arrows: false,
+	  dots: false,
 	  responsive: [
 	    {
 	      breakpoint: 700,
