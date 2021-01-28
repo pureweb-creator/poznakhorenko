@@ -1,0 +1,94 @@
+.page-wrapper--themes-page{
+	grid-template-columns: 1fr 3fr;
+	grid-column-gap: 30px;
+
+
+	.page-sidebar{
+		.filter{
+			&__item{
+				margin-bottom: 40px;
+			}
+
+			&__title{
+				color: $color_active;
+				font-weight: 700;
+				margin-bottom: 25px;
+			}
+
+			&__input-group{
+				margin-bottom: 15px;
+				&__label{
+					color: rgb(153, 153, 153);
+					font-size: 14px;
+					margin-bottom: 15px;
+					display: block;
+				}
+			}
+
+			&__select{
+				background: #fff;
+				border: 1px solid #e3e3e3;
+			    appearance: none;
+			    background: url('http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png') no-repeat 95% 12px / 10px 10px;
+			    padding: 12px 14px 12px 10px;
+			    font-size: 12px;
+			    line-height: 14px;
+			    color: #252525;
+			    border-radius: 5px;
+			    font-weight: 700;
+			    width: 100%;
+			    display: block;
+			}
+
+			&__send-btn{
+				margin-right: 0;
+			}
+		}
+	}
+
+	.page-stack{
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 15px;
+
+		.stack__item{
+			min-height: 250px;
+			overflow: hidden;
+
+			&:hover{
+		    	.stack__item__thumbnail{
+		    		transform: scale(1.4);
+		    	}
+		    }
+
+			.mask{
+				padding: 15px;
+				background: rgba(0,0,0,0.5);
+				display: flex;
+			    flex-direction: column;
+			    justify-content: flex-start;
+			}
+
+			&__thumbnail{
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				transition: all 1s ease;
+			}
+
+			&__title{
+				color: $color_text_ligt_active;
+				font-weight: 400;
+				line-height: 1.5em;
+				font-size: 18px;
+				text-transform: uppercase;
+				word-wrap: break-word;
+			}
+
+			&__view-more{
+				display: block;
+				margin-left: 0;
+				margin-top: 15px;
+			}
+		}
+	}
+}

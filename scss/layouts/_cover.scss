@@ -1,0 +1,17 @@
+.cover{
+	padding: 40px 0;
+	.page-title{
+		color: #fff;
+		font-family: "Open Sans";
+		text-transform: uppercase;
+	}
+
+
+	&--small{
+		.page-title{
+			font-size: 20px;
+			font-weight: 400;
+			letter-spacing: 2px;
+		}
+	}
+}

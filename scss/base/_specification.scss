@@ -2,6 +2,7 @@ $color_main: #333;
 $color_title: #000;
 
 $color_active: rgb(128, 188, 220);
+$color_red_style: #f4524d;
 
 $color_text_light: #b3b3b3;
 $color_text_ligt_active: #fff;
@@ -121,6 +122,7 @@ section{
 .btn{
 	background: $color_active;
 	display: table;
+	cursor: pointer;
 	margin: 0 auto;
 	padding: 20px 28px;
     font-size: 14px;
@@ -137,6 +139,18 @@ section{
     }
 }
 
+
+.btn--style_red{
+	background-color: $color_red_style;
+	border-radius: 5px;
+	letter-spacing: unset;
+	font-weight: 400;
+	padding: 14px 20px;
+
+	&:hover{
+    	background: darken($color_red_style, 30);
+    }
+}
 
 .stack__item{
 	position: relative;
@@ -176,10 +190,18 @@ input,textarea,button{
 	outline: none;
 }
 
+select{
+	cursor: pointer;
+}
+
 body,a,input{
 	color: $color_main;
 }
 
 h1,h2,h3,h4,h5,h6{
 	color: $color_title;
+}
+
+h3{
+	font-size: 20px;
 }
