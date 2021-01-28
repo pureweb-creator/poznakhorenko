@@ -64,7 +64,7 @@ $(document).ready(function(){
 		});
 	}
 
-	$('.burger').on('click', {passive: true},function(){
+	$('.burger').on('click', {passive: true}, function(){
 	  $('.mob-nav').toggle(200);
 	});
 
