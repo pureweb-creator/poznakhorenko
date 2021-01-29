@@ -63,6 +63,11 @@
 			background: $color_yellow_style;
 			border-color: $color_yellow_style;
 			margin-right: 20px;
+
+			&:hover{
+				background: transparent;
+				border-color: $color_yellow_style
+			}
 		}
 
 
