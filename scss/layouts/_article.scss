@@ -10,8 +10,28 @@
 		color: rgb(64, 64, 64);
 	}
 
+	blockquote{
+		font-style: italic;
+		margin: 20px 0;
+		padding-left: 50px;
+		position: relative;
+		color: $color_active;
+
+		&::before{
+			content: "\f10d";
+			font-family: "FontAwesome";
+			font-style: normal;
+			font-size: 35px;
+			position: absolute;
+			left: 0;
+			top: 9px;
+
+		}
+	}
+
 	p{
 		padding: 15px 0;
+		color: #000;
 	}
 
 	img{

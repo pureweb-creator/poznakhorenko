@@ -455,33 +455,4 @@
 			}
 		}
 	}
-
-	.slick-prev, .slick-next{
-		width: 58px;
-    	height: 58px;
-    	line-height: 58px;
-	    padding: 10px;
-	    opacity: 0;
-	    background-color: rgba(0,0,0,.4);
-	    border-radius: 2px;
-	    transition: all .3s ease;
-
-	    &:hover{
-	    	background-color: rgba(0,0,0,.8);
-	    }
-	}
-
-	.slick-next::before,
-	.slick-prev::before{
-		content: "";
-	}
-
-	.slick-next{
-		right: 30px;
-	}
-
-	.slick-prev{
-		left: 30px;
-		z-index: 999;
-	}
 }

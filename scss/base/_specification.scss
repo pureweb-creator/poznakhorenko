@@ -3,6 +3,7 @@ $color_title: #000;
 
 $color_active: rgb(128, 188, 220);
 $color_red_style: #f4524d;
+$color_yellow_style: #ffd000;
 
 $color_text_light: #b3b3b3;
 $color_text_ligt_active: #fff;
@@ -19,6 +20,11 @@ body{
 
 body.gap{
 	padding-top: 92.6px;
+}
+
+.center-x{
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container{
@@ -84,6 +90,14 @@ i.fas:before{
 	content: "\f060";
 }
 
+.fa-arrow-circle-left:before{
+	content: "\f359";
+}
+
+.fa-arrow-circle-right:before{
+	content: "\f35a";
+}
+
 .d-flex{
 	display: flex;
 }
@@ -94,6 +108,10 @@ i.fas:before{
 
 .d-grid{
 	display: grid;
+}
+
+.align-items-center{
+	align-items: center;
 }
 
 section{
@@ -220,6 +238,7 @@ body,a,input{
 
 h1,h2,h3,h4,h5,h6{
 	color: $color_title;
+	font-family: "Open Sans"
 }
 
 h3{

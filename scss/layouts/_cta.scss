@@ -1,0 +1,44 @@
+.cta{
+	&-form{
+		padding: 50px 0;
+		&__group{
+			justify-content: space-between;
+			align-items: center;
+
+		}
+		&__input{
+			background: transparent;
+		    color: #fff;
+		    border: 2px solid #ececec;
+		    border-radius: 32px;
+		    font-size: 16px;
+		    line-height: 16px;
+		    text-transform: uppercase;
+		    width: 23%;
+		    padding: 21px 21px 19px;
+
+		    &::placeholder{
+		    	color: #fff;
+		    }
+		}
+		&__btn{
+		    padding: 21px 21px 19px;
+			border-radius: 100px;
+			width: 23%;
+			text-transform: uppercase;
+		    font-weight: 500;
+		    font-size: 16px;
+		    letter-spacing: 1px;
+		    background: #ffcc00;
+		    border: 2px solid #ffcc00;
+		    color: #1e1e24;
+		    transition: all .2s ease;
+		    cursor: pointer;
+		    &:hover{
+		    	background: transparent;
+		    	border-color: #fff;
+		    	color: #fff;
+		    }
+		}
+	}
+}

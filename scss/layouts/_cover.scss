@@ -15,4 +15,14 @@
 			letter-spacing: 2px;
 		}
 	}
+
+	&--big{
+		padding: 85px 0;
+		.page-title{
+			font-size: 60px;
+			line-height: 1.3em;
+			text-align: left;
+		}
+
+	}
 }
