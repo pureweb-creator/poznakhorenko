@@ -1,0 +1,24 @@
+.card{
+	&__thumbnail{
+		width: 100%;
+	}
+
+	&__title{
+		text-transform: uppercase;
+		margin: 15px 0;
+
+		font-weight: 700;
+		font-family: "Open Sans";
+		color: rgb(64, 64, 64);
+	}
+
+	&__text{
+		margin: 15px 0;
+		margin-bottom: 25px;
+	}
+
+	&__btn{
+		color: #fff;
+		display: inline-block;
+	}
+}

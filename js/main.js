@@ -805,7 +805,7 @@ $(document).ready(function(){
 	});
 
 	$(window).scroll(function () {
-	  if($(window).scrollTop() > 50) {
+	  if($(window).scrollTop() > 100) {
 	    $(".heading-wrapper").addClass('sticky');
 	    $('body').addClass('gap');
 
@@ -824,4 +824,14 @@ $(document).ready(function(){
 	    }
 	    return false; // выключаем стандартное действие
 	});
+
+
+	if( $('.tabs') ){
+
+		$('ul.tabs__caption').on('click', 'li:not(.active)', {passive: true}, function() {
+			$(this)
+		  		.addClass('active').siblings().removeClass('active')
+		  		.closest('.tabs').find('.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+		});
+	}
 });

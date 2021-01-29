@@ -1,0 +1,43 @@
+.page-wrapper--themes_article_page{
+	.tabs__caption{
+		background: #ebebeb;
+		margin: 0;
+		display: flex;
+		justify-content: center;
+
+		li{
+			cursor: pointer;
+			transition: all .3s ease;
+			margin: 0;
+			color: #666;
+			border-right: 1px solid #e1e0e0;
+			padding: 14px 20px;
+			background: #ebebeb;
+
+			&:last-child{
+				border-right: unset;
+			}
+
+			&:hover{
+				background: darken(#ebebeb, 10);
+			}
+
+			&.active{
+				background: #f8f8f8;
+			}
+		}
+	}
+	.tabs__content{
+		background: #f8f8f8;
+		padding: 20px;
+		padding-top: 50px;
+	}
+}
+
+.article-author{
+	width: 30%;
+}
+
+.acricle-contact-form{
+	margin-left: auto;
+}

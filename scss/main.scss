@@ -6,11 +6,16 @@
 
 @import "layouts/header";
 @import "layouts/cover";
+@import "layouts/social-sharing";
+@import "layouts/article";
+@import "layouts/card";
+@import "layouts/page-nav";
 @import "layouts/contacts";
 @import "layouts/footer";
 
 @import "pages/home";
 @import "pages/works";
 @import "pages/themes";
+@import "pages/themes-article";
 
 @import "base/responsive";

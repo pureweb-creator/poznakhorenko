@@ -76,8 +76,20 @@ i.fas:before{
 	content: "\f004";
 }
 
+.fa-arrow-right:before{
+	content: "\f061";
+}
+
+.fa-arrow-left:before{
+	content: "\f060";
+}
+
 .d-flex{
 	display: flex;
+}
+
+.flex-wrap{
+	flex-wrap: wrap;
 }
 
 .d-grid{
@@ -86,6 +98,13 @@ i.fas:before{
 
 section{
 	padding: 50px 0;
+}
+
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
 }
 
 .section-with-bg{
@@ -145,6 +164,7 @@ section{
 	border-radius: 5px;
 	letter-spacing: unset;
 	font-weight: 400;
+	transition: all .3s ease;
 	padding: 14px 20px;
 
 	&:hover{
