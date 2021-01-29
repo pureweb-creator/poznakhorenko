@@ -1,5 +1,5 @@
 .more-articles{
-	padding-bottom: 50px;
+	margin-bottom: 50px;
 	.slick-slide{
 		margin: 0 5px;
 	}
@@ -63,6 +63,7 @@
 	    padding: 10px;
 	    background-color: rgba(0,0,0,.4);
 	    border-radius: 2px;
+	    opacity: 1 !important;
 	    transition: all .3s ease;
 
 	    &:hover{
@@ -75,9 +76,6 @@
 	    content: "";
 	}
 
-	.slick-prev,.slick-next{
-		opacity: 1 !important;
-	}
 	.slick-next{
 		right: -10px;
 	}

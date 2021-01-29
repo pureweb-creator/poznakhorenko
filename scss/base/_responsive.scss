@@ -39,6 +39,9 @@
 	body{
 		font-size: 13px;
 	}
+	h1{
+		font-size: 30px !important;
+	}
 	h3{
 		font-size: 20px !important;
 	}
@@ -190,6 +193,9 @@
 		right: 20px;
     	bottom: 20px;
 	}
+	.cover--big{
+		padding: 30px 0;
+	}
 	.section-title{
 		margin-bottom: 50px;
 	}
@@ -258,6 +264,48 @@
 			font-size: 22px;
 		}
 	}
+
+
+	// CALL TO ACTION BLOCK
+	.cta{
+		&-form__input{
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+
+	// PROMO BLOCK
+	.promo{
+		&-block{
+			flex-direction: column;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 20px;
+
+			& > *{
+				width: 100%;
+			}
+
+			&__right{
+				margin-top: 20px;
+			}
+
+			&__link{
+				margin-bottom: 10px;
+			}
+
+			&--hot_stuff{
+				width: 100%;
+			}
+
+			&--hot_stuff__offer{
+				left: 50%;
+				transform: translateX(-50%);
+				width: 98%;
+			}
+		}
+	}
+
 }
 
 @media (max-width: 600px){
@@ -386,6 +434,13 @@
 	.article-author{
 		.card__thumbnail{
 			width: 50%;
+		}
+	}
+
+	// CALL TO ACTION BLOCK
+	.cta{
+		&-form__btn{
+			width: 100%;
 		}
 	}
 }
