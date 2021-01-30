@@ -1,11 +1,23 @@
 .card{
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
 	&__thumbnail{
 		width: 100%;
 	}
 
+	&__body{
+		padding: 20px;
+	}
+
+	.pubdate{
+		font-style: italic;
+		font-size: 11px;
+		color: #999;
+	}
+
 	&__title{
 		text-transform: uppercase;
-		margin: 15px 0;
+		margin: 10px 0;
 
 		font-weight: 700;
 		font-family: "Open Sans";
@@ -13,8 +25,12 @@
 	}
 
 	&__text{
-		margin: 15px 0;
+		margin: 10px 0;
 		margin-bottom: 25px;
+	}
+
+	&__bottom{
+		padding: 0 20px 20px;
 	}
 
 	&__btn{

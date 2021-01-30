@@ -1,0 +1,28 @@
+.page-wrapper--blog_page{
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 50px;
+
+	.stack{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+	}
+
+	.card{
+		border: 1px solid #e3e3e3;
+		&__title{
+			font-size: 14px;
+			letter-spacing: 1px;
+
+		}
+
+		&__btn{
+			padding: 10px 17px;
+		}
+
+		&__bottom{
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		}
+	}
+}

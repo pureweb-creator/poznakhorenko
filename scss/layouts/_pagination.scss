@@ -1,0 +1,35 @@
+.pagination{
+	align-items: center;
+	color: rgba(0,0,0,.4);
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	&__list{
+		align-items: center;
+		margin-bottom: 15px !important;
+
+		
+		.prev{
+			margin-right: 15px;
+		}
+
+		.next{
+			margin-left: 15px;
+		}
+
+		a{
+			color: rgba(0,0,0,.4);
+		}
+	}
+
+	&__numbers{
+		padding: 10px 14px;
+	    line-height: 12px;
+	    font-size: 13px;
+	    margin: 0 6px;
+	    border: 2px solid transparent;
+	    &.active{
+	    	border-color: rgba(0,0,0,.4);
+	    }
+	}
+}
