@@ -330,9 +330,42 @@
 			grid-row: 2/3;
 		}
 	}
+
+
+	// BLOG ARTICLE PAGE
+	.more-articles{
+		margin: 25px 0;
+		
+		ul{
+			flex-wrap: wrap;
+
+			li{
+				width: 50%;
+				margin-bottom: 10px;
+			}
+		}
+
+		&__item{
+			
+			margin: 0 5px;
+
+			.mask{
+				padding: 10px;
+			}
+		}
+		&__title{
+			font-size: 16px;
+		}
+	}
 }
 
 @media (max-width: 600px){
+	.cover--small{
+		.page-title{
+			font-size: 20px !important;
+			line-height: 1.2em;
+		}
+	}
 	h3{
 		font-size: 18px !important;
 	}
@@ -478,5 +511,13 @@
 	// WIDGETS
 	.sidebar-widget{
 		margin-bottom: 20px;
+	}
+
+	.more-articles{
+		ul{
+			li{
+				width: 100%;
+			}
+		}
 	}
 }

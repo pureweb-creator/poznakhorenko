@@ -1,10 +1,10 @@
 .page-wrapper--blog_page{
-	grid-template-columns: 2fr 1fr;
+	grid-template-columns: 3fr 1fr;
 	grid-gap: 50px;
 
 	.stack{
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 30px;
+		grid-gap: 15px;
 	}
 
 	.card{
@@ -23,6 +23,136 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center
+		}
+	}
+
+	.article{
+		text-align: left;
+
+		h2{
+			text-align: left;
+		}
+	}
+
+
+	.article-meta{
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+
+
+
+		&__left{
+			font-style: italic;
+			color: #999;
+		}
+
+		&__right{
+			.comments{
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.article-author{
+		display: flex;
+		color: $color_active;
+		align-items: center;
+		width: 100%;
+		margin-top: 20px;
+		border-bottom: 2px solid #ddd;
+    	border-top: 2px solid #ddd;
+    	padding: 20px 0;
+
+		&__avatar{
+			width: 65px;
+			height: 65px;
+			object-fit: cover;
+			border-radius: 100px;
+			margin-right: 15px;
+		}
+
+		&__name{
+			font-weight: 700;
+		}
+
+		&__more{
+			color: $color_active;
+
+			i{
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.page-wrapper__headings{
+		color: #333;
+		font-weight: 700;
+		opacity: 1;
+		font-family: "PT Sans";
+		text-align: center;
+		letter-spacing: 2px;
+		margin-bottom: 30px;
+	}
+
+	.more-articles{
+		margin: 50px 0;
+
+		&__item{
+			margin: 0 5px;
+
+			.mask{
+				padding: 20px;
+			}
+		}
+		&__title{
+			font-size: 18px;
+		}
+	}
+	.comments-l{
+		&__i{
+			padding: 15px 0;
+		}
+		&__i:not(:last-child){
+			border-bottom: 1px solid #ddd
+		}
+		&__top{
+			display: flex;
+			align-items: center;
+		}
+
+		&__avatar{
+			margin-right: 10px;
+			width: 48px;
+			height: 48px;
+			object-fit: cover;
+			border-radius: 100px;
+		}
+
+		&__name{
+			font-weight: 700;
+		}
+
+		&__pubdate{
+			font-style: italic;
+			color: #999;
+			margin-left: 10px;
+			font-size: 11px;
+		}
+
+		&__body{
+			padding: 10px;
+		}
+	}
+
+	.leave-comment{
+		width: 100%;
+		border-top: 2px solid #ddd;
+		padding-top: 40px;
+		max-width: 100%;
+		input,textarea{
+			border: 1px solid rgba(0,0,0,0.2);
+			border-radius: 5px;
 		}
 	}
 }
