@@ -5,6 +5,6 @@
 [МОИ ТЕМЫ (ШАБЛОН СТАТЬИ)](https://pureweb-creator.github.io/poznakhorenko/my-themes-article.html)\
 [ВАКАНСИИ (АРХИВ)](https://pureweb-creator.github.io/poznakhorenko/vacancies.html)\
 [БЛОГ (АРХИВ)](https://pureweb-creator.github.io/poznakhorenko/blog.html)\
-[БЛОГ (СТАТЬЯ)](https://pureweb-creator.github.io/poznakhorenko/blog-article.html)
+[БЛОГ (СТАТЬЯ)](https://pureweb-creator.github.io/poznakhorenko/blog-article.html)\
 [КОНАТКТЫ](https://pureweb-creator.github.io/poznakhorenko/contacts.html)
 
