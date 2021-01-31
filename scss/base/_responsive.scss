@@ -186,6 +186,16 @@
 		width: 70%;
 	}
 
+	.more-articles__item{
+		.mask,.more-articles__title,.more-articles__category{
+			opacity: 1;
+			top: 0;
+		}
+		.fa-arrow-circle-right{
+			display: none;
+		}
+	}
+
 	// BLOG ARCHIVE
 	.page-wrapper--blog_page{
 		grid-template-columns: 1fr;
@@ -373,6 +383,9 @@
 			line-height: 1.2em;
 		}
 	}
+	h1{
+		font-size: 22px !important;
+	}
 	h3{
 		font-size: 18px !important;
 	}
@@ -441,6 +454,26 @@
 	}
 	.acricle-contact-form{
 		width: 60%;
+	}
+
+	// VACANCY ARTICLE
+	.page-vacancy__category{
+		font-size: 14px;
+	}
+	.page-vacancy .page-vacancy__btn{
+		font-size: 13px;
+		letter-spacing: 1px;
+		padding: 14px 20px;
+	}
+	.page-vacancy .page-wrapper__vacancy .vacancy-item{
+		grid-template-columns: 1fr;
+		grid-gap: 0;
+		h2{
+			text-align-last: left;
+		}
+	}
+	.page-vacancy .page-wrapper__vacancy .vacancy-item .page-vacancy__btn{
+		grid-column: 1/3
 	}
 }
 
