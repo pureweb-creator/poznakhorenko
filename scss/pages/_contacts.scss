@@ -1,0 +1,33 @@
+.contacts-page{
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 30px;	
+	.contacts__list{
+		li{
+			line-height: 20px;
+			&:not(:last-child){
+				margin-bottom: 8px;
+			}
+			i{
+				color: #b2b2b2;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.contact-form{
+		margin-top: 20px;
+		&__title{
+			text-transform: uppercase;
+			margin-bottom: 18px;
+		}
+		input,textarea{
+			border: 1px solid rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+	}
+
+
+	iframe{
+		width: 100%;
+	}
+}

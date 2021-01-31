@@ -1,5 +1,5 @@
 $color_main: #333;
-$color_title: #000;
+$color_title: #3d3d3d;
 
 $color_active: rgb(128, 188, 220);
 $color_red_style: #f4524d;
@@ -108,6 +108,14 @@ i.fas:before{
 
 .fa-reply:before{
 	content: "\f3e5";
+}
+
+.fa-clock:before{
+	content: "\f017";
+}
+
+.fa-home:before{
+	content: "\f015";
 }
 
 .d-flex{
@@ -250,7 +258,8 @@ body,a,input{
 
 h1,h2,h3,h4,h5,h6{
 	color: $color_title;
-	font-family: "Open Sans"
+	font-family: "Open Sans";
+	line-height: 1.3em;
 }
 
 h3{
