@@ -214,9 +214,11 @@
 
 	<section class="cover cover--big" style="background: url('img/shapka_strategii.webp') no-repeat fixed center top / cover;">
 		<div class="container">
+			<span class="page-category">Семинар</span>
 			<h1 class="page-title">
 				Стратегии <br>и планирование
 			</h1>
+			<a href="#!" data-remodal-target="details-modal" class="btn page-btn">Узнать подробности</a>
 		</div>
 	</section>
 
@@ -268,7 +270,31 @@
 					<li>Excel не понимает двусмысленности.</li>
 					<li>Action plan. </li>
 					<li>План действий в последовательности и во времени.</li>
-				</ol>   
+				</ol>  
+
+
+				<table>
+				 	<tr>
+				 		<td>1</td>
+				 		<td>Теория организаций. Какие принципы и законы работают при возникновении и развитии организаций</td>
+				 	</tr>
+				 	<tr>
+				 		<td>2</td>
+				 		<td>Формы организаций. Как это было в истории </td>
+				 	</tr>
+				 	<tr>
+				 		<td>3</td>
+				 		<td>Организация как система. Теория систем. Организация, как открытая система. Внутренние и внешние среды. Взаимовлияния </td>
+				 	</tr>
+				 	<tr>
+				 		<td>4</td>
+				 		<td>Синергия и эффективность</td>
+				 	</tr>
+				 	<tr>
+				 		<td>5</td>
+				 		<td>Функции и виды работ</td>
+				 	</tr>
+				 </table> 
 					  
 			</article>
 
@@ -302,7 +328,6 @@
 				</span>
 			</span>
 		</a>
-
 	</section>
 
 
@@ -379,6 +404,7 @@
 					Поиск и подбор талантов
 				</h3>
 				<span class="more-articles__category">Мои темы</span>
+				<div class="gradient"></div>
 			</div>
 		</a>
 		<a href="#" class="more-articles__item stack__item">
@@ -389,6 +415,7 @@
 					Поиск и подбор талантов
 				</h3>
 				<span class="more-articles__category">Мои темы</span>
+				<div class="gradient"></div>
 			</div>
 		</a>
 		<a href="#" class="more-articles__item stack__item">
@@ -399,6 +426,7 @@
 					Поиск и подбор талантов
 				</h3>
 				<span class="more-articles__category">Мои темы</span>
+				<div class="gradient"></div>
 			</div>
 		</a>
 		<a href="#" class="more-articles__item stack__item">
@@ -409,6 +437,7 @@
 					Поиск и подбор талантов
 				</h3>
 				<span class="more-articles__category">Мои темы</span>
+				<div class="gradient"></div>
 			</div>
 		</a>
 	</div>
@@ -455,6 +484,35 @@
 			</span>
 		</div>
 	</footer>
+
+
+	<!-- VIEW DETAILS POP-UP -->
+	<div class="remodal page-modal details-modal" data-remodal-id="details-modal">
+	  <form action="#" method="POST" class="page-form">
+	  	<h2>Уточнить подробности</h2>
+	  	<div class="form-group">
+	  		<label for="name" class="form-group__label">
+	  			Ваше имя*
+	  		</label>
+	  		<input type="text" name="name" id="name" class="form-group__input">
+	  	</div>
+	  	<div class="form-group">
+	  		<label for="email" class="form-group__label">
+	  			Ваш email*
+	  		</label>
+	  		<input type="email" name="email" id="email" class="form-group__input">
+	  	</div>
+	  	<div class="form-group">
+	  		<label for="tel" class="form-group__label">
+	  			Телефон*
+	  		</label>
+	  		<input type="tel" name="tel" id="tel" class="form-group__input">
+	  	</div>
+	  	<div class="form-group">
+	  		<button type="submit" class="btn form-group__btn">Отправить резюме</button>
+	  	</div>
+	  </form>
+	</div>
 
     <script defer src="js/main.min.js"></script>
     <script defer src="js/slick.min.js"></script>

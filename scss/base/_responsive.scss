@@ -457,14 +457,15 @@
 	}
 
 	// VACANCY ARTICLE
-	.page-vacancy__category{
+	.cover .page-category{
 		font-size: 14px;
 	}
-	.page-vacancy .page-vacancy__btn{
+	.cover .page-btn{
 		font-size: 13px;
 		letter-spacing: 1px;
 		padding: 14px 20px;
 	}
+
 	.page-vacancy .page-wrapper__vacancy .vacancy-item{
 		grid-template-columns: 1fr;
 		grid-gap: 0;

@@ -50,4 +50,17 @@
 			margin: 5px 0;
 		}
 	}
+
+
+	table{
+		width: fit-content;
+		border-collapse: collapse;
+
+		td{
+			text-align: left;
+		    vertical-align: middle;
+		    border: solid 1px #ddd;
+		    padding: 12px;
+		}
+	}
 }
