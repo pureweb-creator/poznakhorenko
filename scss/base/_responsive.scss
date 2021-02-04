@@ -469,7 +469,7 @@
 	.cover .page-category{
 		font-size: 14px;
 	}
-	.cover .page-btn{
+	.cover .page-btn, .cover .page-vacancy__btn{
 		font-size: 13px;
 		letter-spacing: 1px;
 		padding: 14px 20px;
@@ -479,11 +479,14 @@
 		grid-template-columns: 1fr;
 		grid-gap: 0;
 		h2{
-			text-align-last: left;
+			text-align: left;
 		}
 	}
 	.page-vacancy .page-wrapper__vacancy .vacancy-item .page-vacancy__btn{
-		grid-column: 1/3
+		grid-column: 1/3;
+		font-size: 13px;
+	    letter-spacing: 1px;
+	    padding: 14px 20px;
 	}
 }
 
