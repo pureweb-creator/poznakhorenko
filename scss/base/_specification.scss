@@ -22,6 +22,11 @@ body.gap{
 	padding-top: 92.6px;
 }
 
+body.active,
+html.active{
+	overflow-y: hidden
+}
+
 .center-x{
 	margin-left: auto;
 	margin-right: auto;

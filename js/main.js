@@ -848,6 +848,7 @@ $(document).ready(function(){
 
 	$('.burger').on('click', {passive: true}, function(){
 	  $('.mob-nav').toggle(200);
+	  $('body, html').toggleClass('active');
 	});
 
 	// Mobile menu
