@@ -10,6 +10,11 @@
 		background-image: url('../img/socialshare.webp');
 		transition: all .3s ease;
 		cursor: pointer;
+
+		a{
+			height: 100%;
+			display: block;
+		}
 	}
 
 	&__fb{
