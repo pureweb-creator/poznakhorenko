@@ -209,6 +209,12 @@
 			}
 		}
 	}
+
+	.pagination{
+		grid-column: 1/2;
+		margin: 20px 0;
+		grid-row: unset;
+	}
 }
 
 @media (max-width: 768px){
@@ -337,7 +343,8 @@
 		}
 
 		.pagination{
-			grid-row: 2/3;
+			width: 100%;
+    		justify-content: space-around;
 		}
 	}
 
