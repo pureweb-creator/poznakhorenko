@@ -320,7 +320,7 @@
 
 					<div class="social-sharing">
 						<ul class="social-sharing__list d-flex">
-							<li class="social-sharing__fb"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnew.poznakhorenko.com%2Fcases%2Fstrategy-and-planning"></a></li>
+							<li class="social-sharing__fb"><a onclick="test('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnew.poznakhorenko.com%2Fcases%2Fstrategy-and-planning')"></a></li>
 							<li class="social-sharing__tw"><a href="#"></a></li>
 							<li class="social-sharing__in"><a href="#"></a></li>
 							<li class="social-sharing__p"><a href="#"></a></li>
@@ -535,5 +535,14 @@
 
     <script defer src="js/main.min.js"></script>
     <script defer src="js/lightbox.min.js"></script>
+
+
+    <script>
+    	function test(url){
+    		var newWin = window.open("about:blank", "hello", "width=600,height=400");
+			newWin.document.write("<iframe src="+url+">Not support</iframe>");
+    		return false;
+    	}
+    </script>
 </body>
 </html>
